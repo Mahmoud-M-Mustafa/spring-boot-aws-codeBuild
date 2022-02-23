@@ -11,6 +11,6 @@ public class ApiController {
     public ResponseEntity<?> healthCheck()
     {
 
-        return ResponseEntity.ok("Master Micro")
+        return ResponseEntity.ok("Master Micro demo 2");
     }
 }
