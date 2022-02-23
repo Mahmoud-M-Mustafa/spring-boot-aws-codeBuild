@@ -1,0 +1,25 @@
+version: 0.2
+
+phases:
+  install:
+    runtime-versions:
+      jave: correttoll
+
+  build:
+    commands:
+      - ./gradlew bootJar
+
+  post_build:
+    commands:
+      - echo Build Completed
+
+artifacts:
+  files:
+    - build/libs/*.jar
+    #... codeDeploy scripts should be here ... appspec.yml
+
+  #com/mycompany/app/HelloWorld.java, specifying yes will place this file in /HelloWorld.java.
+  discard-paths: yes
+
+
+
