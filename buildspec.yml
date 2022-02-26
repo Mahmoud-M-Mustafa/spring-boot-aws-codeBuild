@@ -2,8 +2,12 @@ version: 0.2
 
 phases:
   install:
-    runtime-versions:
-      java: corretto16
+    commands:
+
+      - wget https://corretto.aws/downloads/latest/amazon-corretto-16-x64-linux-jdk.deb
+      - sudo apt-get update && sudo apt-get install java-common
+      - sudo dpkg --install amazon-corretto-16-x64-linux-jdk.d
+      - java -version
 
   pre_build:
     commands:
