@@ -5,8 +5,8 @@ phases:
     commands:
 
       - wget https://corretto.aws/downloads/latest/amazon-corretto-16-x64-linux-jdk.deb
-      - sudo apt-get update && sudo apt-get install java-common
-      - sudo dpkg --install amazon-corretto-16-x64-linux-jdk.d
+      - apt-get update &&  apt-get install java-common
+      - dpkg --install amazon-corretto-16-x64-linux-jdk.d
       - java -version
 
   pre_build:
