@@ -4,6 +4,7 @@ phases:
   install:
     commands:
 
+
       - apt-get update
       - wget -O- https://apt.corretto.aws/corretto.key |  apt-key add -
       - echo 'deb https://apt.corretto.aws stable main' |  tee /etc/apt/sources.list.d/corretto.list
