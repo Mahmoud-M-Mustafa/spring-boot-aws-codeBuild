@@ -2,8 +2,16 @@ version: 0.2
 
 phases:
   install:
-    runtime-versions:
-      java: corretto11
+    commands:
+
+
+      - apt-get update
+      - wget -O- https://apt.corretto.aws/corretto.key |  apt-key add -
+      - echo 'deb https://apt.corretto.aws stable main' |  tee /etc/apt/sources.list.d/corretto.list
+      - apt-get update
+      - apt-get install java-16-amazon-corretto-jdk
+
+
 
   pre_build:
     commands:
